@@ -1,0 +1,135 @@
+<!-- Brand Logo -->
+<a [routerLink]="['/']" class="brand-link">
+    <pf-image
+        src="assets/img/cancer.png"
+        alt="Medicare Logo"
+        class="brand-image"
+        height="33"
+        width="33"
+        rounded
+        style="opacity: 0.8"
+    ></pf-image>
+    <span class="brand-text font-weight-light">Medicare - V1</span>
+</a>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <!-- Sidebar user (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+            <pf-image
+                fallback-src="assets/img/user.jpg"
+                class="img-circle"
+                alt="User Image"
+                width="34"
+                height="34"
+                rounded
+            ></pf-image>
+        </div>
+        <div class="info">
+            <a [routerLink]="['/profile']" class="d-block">
+                {{this.user.Email}}
+            </a>
+        </div>
+    </div>
+
+    <div class="form-inline">
+        <app-sidebar-search></app-sidebar-search>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <!-- <nav class="mt-2" style="overflow-y: hidden">
+        <ul style="fill: white;"
+            class="nav nav-pills nav-sidebar flex-column"
+            data-widget="treeview"
+            role="menu"
+            data-accordion="false"
+        >
+        sss
+            <app-menu-item
+                *ngFor="let item of menu"
+                [menuItem]="item"
+            ></app-menu-item>
+           
+        </ul>
+    </nav> -->
+    <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item menu-open">
+            <a href="/dashboard" class="nav-link active">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            
+          </li>
+          <li class="nav-item">
+            <a href="/clasification" class="nav-link">
+              <i class="nav-icon fas fa-th"></i>
+              <p>
+                Clasification
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="/medicalhistory" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Medical History
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                Service
+              </p>
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="pages/calendar.html" class="nav-link">
+              <i class="nav-icon far fa-calendar-alt"></i>
+              <p>
+                Calendar
+                <span class="badge badge-info right">2</span>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon far fa-envelope"></i>
+              <p>
+                Message
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/mailbox/mailbox.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Inbox</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/mailbox/compose.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Compose</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/mailbox/read-mail.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Read</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+</div>

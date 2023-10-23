@@ -1,0 +1,122 @@
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0 text-dark">Classification Details</h1>
+            </div>
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active">Patient Details</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="row" style="padding-bottom: 15px;">
+        <div class="col-lg-12 col-12">
+            <div class="card" style="height: 100%;">
+                <div class="card-body" style="display: flex; flex-direction: row; justify-content: space-between; flex: none">
+                    <div class="col-lg-10 col-10">
+                        <input type="file" #fileInput class="btn btn-secondary" (change)="onFileSelected($event)" (click)="onChooseFileClick()" accept="image/*">
+
+                    </div>
+                    <div class="col-lg-2 col-2">
+                        <pf-button class="pull-right" [type]="'submit'" (click)="onUpload()">Check Result</pf-button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4 col-4">
+            <div class="card" style="height: 100%;">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 col-12" style="border-radius: 10px;">
+                            <img *ngIf="imageUrl" [src]="imageUrl" alt="Uploaded Image" width="400px" height="300px" style="border-radius: 10px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 col-8">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-12">
+                    <div class="info-box">
+                        <div class="info-box-content">
+                            <h1 [ngStyle]="{'color': imageResult === 'Non-Melanoma' ? 'green' : 'red', 'font-weight': imageResult === 'Non-Melanoma' ? 'bold' : 'normal'}">{{ imageResult }}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card card-primary card-outline col-md-12 col-sm-12 col-12" style="margin-left: 10px;">
+                    <div class="card-body">
+                    <h5 class="card-title" style="font-weight: bold;">Result Details</h5>
+                    <p class="card-text">
+                        1. Schedule a biopsy for further evaluation. <br/>
+                        2. Monitor the lesion and schedule a follow-up appointment in 3 months. <br/>
+                        3. Seek immediate medical attention for a more detailed assessment. <br/>
+                        4. Discuss the assessment results with your primary care physician.
+                    </p>
+
+                    <h5 class="card-title" style="font-weight: bold;">Additional Diagnostics or Features</h5>
+                    <p class="card-text">
+                        1. Skin Spot Shape: Irregular <br/>
+                        2. Boundary Characteristics: Uneven, Notched <br/>
+                        3. Texture Features: Granular, Homogeneous
+                    </p>
+                    
+                    <h6 class="card-title" style="font-weight: bold;">Date and Time of Assessment:</h6>
+                    <p class="card-text">
+                        October 25, 2023 10:30 AM
+                    </p>
+                    <a href="#" class="card-link">Download Report</a>
+                    <a href="#" class="card-link">Share Report</a>
+                    </div>
+                    </div>
+                <div class="col-md-6 col-sm-6 col-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-info"><i class="far fa-map"></i></span>
+                        <div class="info-box-content">
+                            <span class="info-box-text">Skin spot color</span>
+                            <span class="info-box-number">Dark</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-success"><i class="fa-arrows-alt"></i></span>
+                        <div class="info-box-content">
+                            <span class="info-box-text">Skin spot size</span>
+                            <span class="info-box-number">3mm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-warning"><i class="fa-columns"></i></span>
+                        <div class="info-box-content">
+                            <span class="info-box-text">Percentage</span>
+                            <span class="info-box-number">75%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-6 col-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-danger"><i class="fa-star"></i></span>
+                        <div class="info-box-content">
+                            <span class="info-box-text">Risk</span>
+                            <span class="info-box-number">80% - High Risk</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

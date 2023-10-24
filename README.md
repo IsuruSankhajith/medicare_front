@@ -4,10 +4,10 @@
   </a>
 </p>
 
-<h1 align="center">Admin LTE 3.2.0 - Angular 15.0.1</h1>
+<h1 align="center">Medicare</h1>
 
 <p>
-  This repository is a form of original adminlte project. It is aim to use adminlte template with Angular.
+  This repository is a form of originally own by Isuru Sankhajith .
 </p>
 <br>
 
@@ -29,8 +29,8 @@
 
 To login website use:
 
-`username:` admin@example.com<br />
-`password:` admin<br />
+`username:` test<br />
+`password:` 123<br />
 
 ## Development server
 
